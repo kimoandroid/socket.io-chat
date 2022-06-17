@@ -7,7 +7,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.github.nkzawa.socketio.androidchat.LoginActivity">
+        tools:context="com.kimo.android.socket.LoginActivity">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -15,18 +15,34 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
-        <EditText
-                android:id="@+id/username_input"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="183dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_username"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPersonName"
-                android:maxLength="14"
-                android:maxLines="1"
-                android:singleLine="true"/>
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:text="@string/web_socket_app" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_username"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPersonName"
+            android:maxLength="14"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            tools:ignore="InvalidImeActionId" />
         <Button
                 android:id="@+id/sign_in_button"
                 style="?android:textAppearanceSmall"
